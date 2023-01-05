@@ -5,14 +5,16 @@ class Course(object):
     def __init__(self, id_param, title_param, description_param,
                  units_param, prereq_param, lecture_sections_param,
                  lab_sections_param, quiz_sections_param, discussion_sections_param):
-        """Constructs a new Course object
+        """
+        Constructs a new Course object
         Parameters: 9
-        id: id of the course (PublishedCourseID) such as CSCI-103 (String)
-        title: title of the course such Introduction to Programming (string)
-        description: description of the course (string)
-        units: number of units for the course such as 2 or 4 units (int)
-        prereq: the prerequisite classes for this course (list of ints (class ids))
-        sections: section objects such as lectures, labs, quizzes, etc (list of objects)"""
+            id: id of the course (PublishedCourseID) such as CSCI-103 (String)
+            title: title of the course such Introduction to Programming (string)
+            description: description of the course (string)
+            units: number of units for the course such as 2 or 4 units (int)
+            prereq: the prerequisite classes for this course (list of ints (class ids))
+            sections: section objects such as lectures, labs, quizzes, etc (list of objects)
+        """
         self._id = id_param
         self._title = title_param
         self._description = description_param
@@ -104,14 +106,14 @@ class Section(object):
         """
         Constructs a new Section object
         Parameters: 8
-        id: id of the section (int)
-        clearance code: either R or D (string)
-        type: Lec, Lab, Dis, or Qz (string)
-        spaces_avaiable: number of spots left (int)
-        day: day the section meets (M, T, W, TH or F) (string)
-        start_time: time section starts in military time (ex: "12:30") (string)
-        end_time: time section ends in military time (ex: "13:50") (string)
-        location: the room the section meets at (string)
+            id: id of the section (int)
+            clearance code: either R or D (string)
+            type: Lec, Lab, Dis, or Qz (string)
+            spaces_avaiable: number of spots left (int)
+            day: day the section meets (M, T, W, TH or F) (string)
+            start_time: time section starts in military time (ex: "12:30") (string)
+            end_time: time section ends in military time (ex: "13:50") (string)
+            location: the room the section meets at (string)
         """
         self._id = id
         self._clearance_code = clearance_code
@@ -213,11 +215,17 @@ itp125 = Course("ITP-125", "From Hackers to CEO: Intro to Information Security",
                 [itp125_lecture1], [], [], [])
 
 
-# print(chem105)
-# print(psych100)
-# print(csci360)
-# print(csci350)
-# print(itp125)
+def generate_schedule(self, list_of_courses):
+    """
+    Use backtracking to find a possible combination of the chosen courses
+    Parameter: 1
+        list_of_courses: all the courses student wants to take (list of objects)
+    Returns: 1
+        scheduled_courses: a working schedule with courses selected (list of objects)
+    """
+    return []
+
+
 
 
 
